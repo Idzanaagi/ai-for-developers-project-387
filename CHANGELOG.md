@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.4.0...calendar-booking-v1.4.1) (2026-06-14)
+
+
+### Bug Fixes
+
+* move personal MCP servers to global config to fix CI validation ([#6](https://github.com/Idzanaagi/ai-for-developers-project-387/issues/6)) ([dfb4450](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/dfb4450de6d56cc3966583105e02403980ab96b0))
+
 ## [1.4.0](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.3.0...calendar-booking-v1.4.0) (2026-06-14)
 
 
