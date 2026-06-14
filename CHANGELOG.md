@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.0](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.2.0...calendar-booking-v1.3.0) (2026-06-14)
+
+
+### Features
+
+* add booking calendar app with server-side validation and TypeSp… ([da3a4df](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/da3a4df47e46398e3df07ef0237a1a01b8eb5bbc))
+* add booking calendar app with server-side validation and TypeSpec API spec ([1f9d195](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/1f9d19535c160548dbd52ad5996f3391eb708ada))
+
 ## [1.2.0](https://github.com/Idzanaagi/ai-for-developers-project-386/compare/calendar-booking-v1.1.2...calendar-booking-v1.2.0) (2026-06-14)
 
 
