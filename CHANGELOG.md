@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.3.0...calendar-booking-v1.4.0) (2026-06-14)
+
+
+### Features
+
+* add opencode CI workflow and remove PLAN.md ([#3](https://github.com/Idzanaagi/ai-for-developers-project-387/issues/3)) ([12b8555](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/12b8555e1ef7d07a5aadfd40523ea4ed6d26321a))
+
 ## [1.3.0](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.2.0...calendar-booking-v1.3.0) (2026-06-14)
 
 
