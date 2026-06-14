@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Предстоящие встречи</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Предстоящие встречи</h1>
+
+    <% if (bookings.length === 0) { %>
+      <p class="subtitle">Нет предстоящих броней</p>
+    <% } else { %>
+      <table class="bookings-table">
+        <thead>
+          <tr>
+            <th>Дата</th>
+            <th>Время</th>
+            <th>Имя</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% bookings.forEach(b => { %>
+            <tr>
+              <td><%= b.startTime.toLocaleDateString('ru-RU', { timeZone: 'Etc/GMT-3', day: 'numeric', month: 'long', year: 'numeric' }) %></td>
+              <td><%= b.startTime.toLocaleTimeString('ru-RU', { timeZone: 'Etc/GMT-3', hour: '2-digit', minute: '2-digit' }) %> — <%= b.endTime.toLocaleTimeString('ru-RU', { timeZone: 'Etc/GMT-3', hour: '2-digit', minute: '2-digit' }) %></td>
+              <td><%= b.guestName %></td>
+              <td><%= b.guestEmail %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    <% } %>
+
+    <a href="/" class="btn" style="margin-top:2rem">На главную</a>
+  </div>
+</body>
+</html>
