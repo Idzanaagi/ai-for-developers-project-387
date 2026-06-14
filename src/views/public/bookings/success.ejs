@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Запись подтверждена</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="success-card">
+      <h1>Вы записаны!</h1>
+      <p class="subtitle">Детали бронирования:</p>
+
+      <table class="booking-details">
+        <tr>
+          <td>Дата:</td>
+          <td><strong><%= booking.startTime.toLocaleDateString('ru-RU', { timeZone: 'Etc/GMT-3', day: 'numeric', month: 'long', year: 'numeric' }) %></strong></td>
+        </tr>
+        <tr>
+          <td>Время:</td>
+          <td><strong><%= booking.startTime.toLocaleTimeString('ru-RU', { timeZone: 'Etc/GMT-3', hour: '2-digit', minute: '2-digit' }) %> — <%= booking.endTime.toLocaleTimeString('ru-RU', { timeZone: 'Etc/GMT-3', hour: '2-digit', minute: '2-digit' }) %></strong></td>
+        </tr>
+        <tr>
+          <td>Имя:</td>
+          <td><strong><%= booking.guestName %></strong></td>
+        </tr>
+        <tr>
+          <td>Email:</td>
+          <td><strong><%= booking.guestEmail %></strong></td>
+        </tr>
+      </table>
+
+      <a href="/" class="btn">На главную</a>
+    </div>
+  </div>
+</body>
+</html>
