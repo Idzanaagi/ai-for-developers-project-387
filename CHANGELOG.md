@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.3](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.12.2...calendar-booking-v1.12.3) (2026-06-21)
+
+
+### Chores
+
+* update cron schedules to Moscow evening (19:00-19:30 MSK) ([8a0b158](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/8a0b158eeda5bf2a7b33818e4ca98a6c3b111731))
+
 ## [1.12.2](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.12.1...calendar-booking-v1.12.2) (2026-06-21)
 
 
