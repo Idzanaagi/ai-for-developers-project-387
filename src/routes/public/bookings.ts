@@ -13,7 +13,7 @@ let mutex: Promise<void> = Promise.resolve();
 
 async function withMutex<T>(fn: () => T | Promise<T>): Promise<T> {
   const prev = mutex;
-  let unlock: () => void;
+  let unlock!: () => void;
   mutex = new Promise<void>(resolve => { unlock = resolve; });
   await prev;
   try {
