@@ -14,4 +14,8 @@ export default defineConfig({
     reuseExistingServer: true,
     timeout: 10000,
   },
+  reporter: [
+    ['line'],
+    ['allure-playwright'],
+  ],
 });

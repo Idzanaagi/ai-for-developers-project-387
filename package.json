@@ -13,7 +13,9 @@
     "test:watch": "vitest",
     "test:e2e": "playwright test",
     "lighthouse": "node scripts/lighthouse.mjs",
-    "lighthouse:open": "node scripts/lighthouse.mjs --open"
+    "lighthouse:open": "node scripts/lighthouse.mjs --open",
+    "report:allure": "allure generate --output allure-report",
+    "report:allure:open": "allure open --port 4000"
   },
   "dependencies": {
     "dotenv": "^16.4.7",
@@ -30,6 +32,9 @@
     "@typespec/http": "^1.13.0",
     "@typespec/openapi": "^1.13.0",
     "@typespec/openapi3": "^1.13.0",
+    "allure": "^3.12.0",
+    "allure-playwright": "^3.10.0",
+    "allure-vitest": "^3.10.0",
     "lighthouse": "^13.4.0",
     "supertest": "^7.2.2",
     "tsx": "^4.19.2",
