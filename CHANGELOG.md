@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.2](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.12.1...calendar-booking-v1.12.2) (2026-06-21)
+
+
+### Chores
+
+* upgrade GitHub Actions to latest versions (checkout@v7, upload-artifact@v7) ([#52](https://github.com/Idzanaagi/ai-for-developers-project-387/issues/52)) ([66d6ad6](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/66d6ad6ed54bbe293c914a1fcf0ef5284348ba9a))
+
 ## [1.12.1](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.12.0...calendar-booking-v1.12.1) (2026-06-21)
 
 
