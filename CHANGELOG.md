@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.2](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.6.1...calendar-booking-v1.6.2) (2026-06-21)
+
+
+### Bug Fixes
+
+* add workflow_dispatch, update schedule to 4am every 2 days, fix model name and API key env ([20ebf3f](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/20ebf3fd0c297a591cc03c79a08538517ed39c87))
+
 ## [1.6.1](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.6.0...calendar-booking-v1.6.1) (2026-06-21)
 
 
