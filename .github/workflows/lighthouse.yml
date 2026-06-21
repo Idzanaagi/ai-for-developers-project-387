@@ -1,8 +1,16 @@
 name: Lighthouse Audit
 on:
+  schedule:
+    - cron: '0 3 * * *'
   push:
     branches: [main]
   workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   audit:
     runs-on: ubuntu-latest
@@ -15,8 +23,13 @@ jobs:
       - run: npm ci
       - name: Run Lighthouse
         run: npm run lighthouse
+        continue-on-error: true
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: lighthouse-reports
           path: lighthouse-reports/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: lighthouse-reports/
+      - uses: actions/deploy-pages@v4
