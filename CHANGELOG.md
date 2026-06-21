@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.1](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.12.0...calendar-booking-v1.12.1) (2026-06-21)
+
+
+### Bug Fixes
+
+* resolve race condition, add guestName validation, make timezone configurable ([#50](https://github.com/Idzanaagi/ai-for-developers-project-387/issues/50)) ([a776839](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/a776839869976a1429531ebda21c9581ab28e6e8))
+
 ## [1.12.0](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.11.1...calendar-booking-v1.12.0) (2026-06-21)
 
 
