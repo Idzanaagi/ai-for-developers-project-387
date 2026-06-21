@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.5.14...calendar-booking-v1.6.0) (2026-06-21)
+
+
+### Features
+
+* add TODO review workflow ([e8aea3f](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/e8aea3f05e6ff641dabfd4adf985dd2544050f0c))
+
 ## [1.5.14](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.5.13...calendar-booking-v1.5.14) (2026-06-21)
 
 
