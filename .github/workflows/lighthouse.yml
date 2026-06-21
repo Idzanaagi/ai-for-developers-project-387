@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   audit:
@@ -33,3 +34,7 @@ jobs:
           publish_dir: lighthouse-reports
           publish_branch: gh-pages
           enable_jekyll: false
+      - name: Sync Lighthouse Issues
+        run: npx tsx scripts/lighthouse-issues.mjs
+        env:
+          GH_TOKEN: ${{ github.token }}

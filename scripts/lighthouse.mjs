@@ -1,6 +1,7 @@
 import { spawn, exec } from 'node:child_process';
 import { mkdir, access, writeFile } from 'node:fs/promises';
 import { request } from 'node:http';
+import { join } from 'node:path';
 import lighthouse from 'lighthouse';
 import { desktopConfig } from 'lighthouse';
 import { launch } from 'chrome-launcher';
@@ -116,6 +117,58 @@ tr:hover{background:#161b22}
   return writeFile(`${OUTPUT_DIR}/index.html`, html);
 }
 
+const CAT_LABELS = {
+  performance: 'Performance',
+  accessibility: 'Accessibility',
+  'best-practices': 'Best Practices',
+  seo: 'SEO',
+};
+
+async function generateRecommendations(results, allLhr) {
+  const lines = ['# Lighthouse Recommendations\n'];
+
+  const reportsUrl = 'https://idzanaagi.github.io/ai-for-developers-project-387';
+
+  for (const page of results) {
+    const lhr = allLhr[page.name];
+    lines.push(`## ${page.name.charAt(0).toUpperCase() + page.name.slice(1)} (/${page.name === 'calendar' ? '' : page.name})\n`);
+
+    let hasIssues = false;
+
+    for (const [catKey, catLabel] of Object.entries(CAT_LABELS)) {
+      const cat = lhr.categories[catKey];
+      if (!cat) continue;
+      const score = page.scores[catKey];
+      const threshold = Math.round(THRESHOLDS[catKey] * 100);
+
+      if (score >= threshold) continue;
+      hasIssues = true;
+
+      lines.push(`### ${catLabel} (${score} / ${threshold})\n`);
+
+      for (const ref of cat.auditRefs) {
+        const audit = lhr.audits[ref.id];
+        if (!audit || audit.score == null || audit.score >= 1) continue;
+        if (audit.scoreDisplayMode === 'notApplicable' || audit.scoreDisplayMode === 'manual') continue;
+
+        const desc = (audit.description || '').replace(/\n/g, ' ').slice(0, 250);
+        lines.push(`- **${audit.title}**`);
+        if (desc) lines.push(`  - ${desc}`);
+      }
+      lines.push('');
+    }
+
+    if (!hasIssues) {
+      lines.push('All categories pass ✓\n');
+    }
+  }
+
+  const md = lines.join('\n');
+  await writeFile(`${OUTPUT_DIR}/recommendations.md`, md);
+  console.log('\nRecommendations saved: lighthouse-reports/recommendations.md');
+  console.log(md);
+}
+
 async function main() {
   const serverProcess = spawn('npx tsx src/server.ts', {
     stdio: 'ignore',
@@ -130,6 +183,7 @@ async function main() {
     await mkdir(OUTPUT_DIR, { recursive: true });
 
     const results = [];
+    const allLhr = {};
     let allPassed = true;
 
     for (const page of PAGES) {
@@ -138,9 +192,13 @@ async function main() {
 
       const result = await runLighthouse(url);
       const { categories, finalDisplayedUrl } = result.lhr;
+      allLhr[page.name] = result.lhr;
 
       const reportPath = `${OUTPUT_DIR}/${page.name}.html`;
       await writeFile(reportPath, result.report);
+
+      const jsonPath = `${OUTPUT_DIR}/${page.name}.json`;
+      await writeFile(jsonPath, JSON.stringify(result.lhr, null, 2));
       console.log(`Report saved: ${reportPath}`);
 
       const scores = {};
@@ -161,6 +219,7 @@ async function main() {
     }
 
     await generateIndex(results);
+    await generateRecommendations(results, allLhr);
 
     if (shouldOpen) {
       console.log('\nOpening reports...');
