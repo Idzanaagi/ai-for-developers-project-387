@@ -1,1 +1,1 @@
-{"id":"77e41fb27d72a9ebf166e1b62abc6bfb","fullName":"calendar-booking:src/__tests__/integration/admin.test.ts#GET /admin excludes past bookings from the list","name":"excludes past bookings from the list","status":"passed","testResultsByEnv":{"default":"7405f44e7e88283a913fe31d434eb51b"}}
+{"id":"77e41fb27d72a9ebf166e1b62abc6bfb","fullName":"calendar-booking:src/__tests__/integration/admin.test.ts#GET /admin excludes past bookings from the list","name":"excludes past bookings from the list","status":"passed","testResultsByEnv":{"default":"9bd1104da3cb9057f2a511702d22ce8c"}}
