@@ -2,7 +2,7 @@
 
 ## Calendar (/)
 
-### Accessibility (86 / 90)
+### Accessibility (81 / 90)
 
 - **Background and foreground colors do not have a sufficient contrast ratio.**
   - Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.12/color-contrast).
