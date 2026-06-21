@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.8.0...calendar-booking-v1.9.0) (2026-06-21)
+
+
+### Features
+
+* add daily schedule at 3am and deploy reports to GitHub Pages ([#39](https://github.com/Idzanaagi/ai-for-developers-project-387/issues/39)) ([c695730](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/c6957303eb16a1a857848e68b454893fffef6ca4))
+
 ## [1.8.0](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.7.0...calendar-booking-v1.8.0) (2026-06-21)
 
 
