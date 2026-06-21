@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.0](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.10.1...calendar-booking-v1.11.0) (2026-06-21)
+
+
+### Features
+
+* generate Lighthouse recommendations.md and auto-sync GitHub Issues ([#45](https://github.com/Idzanaagi/ai-for-developers-project-387/issues/45)) ([218580e](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/218580e7cb3b326e9c7af1dd954e36bc1769dcd1))
+
 ## [1.10.1](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.10.0...calendar-booking-v1.10.1) (2026-06-21)
 
 
