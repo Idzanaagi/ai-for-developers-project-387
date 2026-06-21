@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.1](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.10.0...calendar-booking-v1.10.1) (2026-06-21)
+
+
+### Bug Fixes
+
+* replace deploy-pages with peaceiris/actions-gh-pages for reliable Pages deployment ([#43](https://github.com/Idzanaagi/ai-for-developers-project-387/issues/43)) ([ceebd4d](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/ceebd4d2640a0dbf0885c72779201b77c3694105))
+
 ## [1.10.0](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.9.0...calendar-booking-v1.10.0) (2026-06-21)
 
 
