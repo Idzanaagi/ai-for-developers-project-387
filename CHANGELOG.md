@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.6](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.12.5...calendar-booking-v1.12.6) (2026-06-21)
+
+
+### Chores
+
+* update workflow schedules to MSK (02:00 and 04:00) ([16b1bc6](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/16b1bc65f179b5348facc3ee7b1459c643b1a649))
+
 ## [1.12.5](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.12.4...calendar-booking-v1.12.5) (2026-06-21)
 
 
