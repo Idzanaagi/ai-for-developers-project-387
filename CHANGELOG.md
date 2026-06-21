@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.12](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.5.11...calendar-booking-v1.5.12) (2026-06-21)
+
+
+### Bug Fixes
+
+* use name without spaces ([c033b6d](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/c033b6de32dc2dd57a98f057f20d3deab5be3b71))
+
 ## [1.5.11](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.5.10...calendar-booking-v1.5.11) (2026-06-21)
 
 
