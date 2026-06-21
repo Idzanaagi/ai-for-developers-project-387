@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.11](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.5.10...calendar-booking-v1.5.11) (2026-06-21)
+
+
+### Bug Fixes
+
+* remove cached todo-review workflow ([024ae4f](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/024ae4fea659219a37371ff6e0305aee513845ff))
+
 ## [1.5.10](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.5.9...calendar-booking-v1.5.10) (2026-06-21)
 
 
