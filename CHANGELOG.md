@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.1](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.11.0...calendar-booking-v1.11.1) (2026-06-21)
+
+
+### Chores
+
+* temp cron schedule for testing actions ([3e5c8c3](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/3e5c8c30ad42cc026475561d21a343be56158957))
+
 ## [1.11.0](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.10.1...calendar-booking-v1.11.0) (2026-06-21)
 
 
