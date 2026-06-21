@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.4](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.12.3...calendar-booking-v1.12.4) (2026-06-21)
+
+
+### Bug Fixes
+
+* use definite assignment assertion for unlock variable ([676ffec](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/676ffec76af7223d96902d4d13a1010ea262b922))
+
 ## [1.12.3](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.12.2...calendar-booking-v1.12.3) (2026-06-21)
 
 
