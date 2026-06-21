@@ -1,0 +1,1 @@
+{"id":"b6bcec3f36379580195f13ae83fab280","fullName":"calendar-booking:src/__tests__/unit/slotService.test.ts#getAvailableSlots leaves non-overlapping adjacent slot before booking as available","name":"leaves non-overlapping adjacent slot before booking as available","status":"passed","testResultsByEnv":{"default":"206fbdd0fcd3fc65a9f2358fda4b266e"}}

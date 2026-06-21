@@ -1,0 +1,1 @@
+{"id":"8cef8404b6262e642e2c3cc4e07a32e4","fullName":"calendar-booking:src/__tests__/integration/bookings.test.ts#DELETE /bookings/:id returns 422 when guestEmail is missing","name":"returns 422 when guestEmail is missing","status":"passed","testResultsByEnv":{"default":"9ae703e0d00f85eedbb6e9dd7ef2af49"}}

@@ -1,0 +1,1 @@
+{"id":"b4bd997be4a1c20ba4588d49759c50ae","fullName":"calendar-booking:src/__tests__/integration/bookings.test.ts#POST /bookings returns 422 for invalid email format","name":"returns 422 for invalid email format","status":"passed","testResultsByEnv":{"default":"a479de7fe4d8b4a9efdafd13e398cb13"}}

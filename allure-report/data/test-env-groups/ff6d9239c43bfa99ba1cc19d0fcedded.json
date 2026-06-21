@@ -1,0 +1,1 @@
+{"id":"ff6d9239c43bfa99ba1cc19d0fcedded","fullName":"calendar-booking:src/__tests__/integration/bookings.test.ts#POST /bookings returns 422 when all fields are empty","name":"returns 422 when all fields are empty","status":"passed","testResultsByEnv":{"default":"dc4b1342c340b815e2f3dcefc4d625b8"}}

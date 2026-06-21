@@ -1,0 +1,1 @@
+{"id":"b154be12276501e4c0fb739e739f1573","fullName":"calendar-booking:src/__tests__/integration/bookings.test.ts#POST /bookings/:id/cancel returns 404 for non-existent booking","name":"returns 404 for non-existent booking","status":"passed","testResultsByEnv":{"default":"fd9c4c6eee3e6d013f1a449ce476ec16"}}

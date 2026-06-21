@@ -1,0 +1,1 @@
+{"id":"5f344314efc573a3159bea430fd7820a","fullName":"calendar-booking:src/__tests__/integration/bookings.test.ts#POST /bookings/:id/cancel returns 404 when email does not match","name":"returns 404 when email does not match","status":"passed","testResultsByEnv":{"default":"8bddf4c1a7f039e302d06e3d737ba736"}}

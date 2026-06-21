@@ -1,0 +1,1 @@
+{"id":"97d94a290ca43da5f534b6791949a0a2","fullName":"calendar-booking:src/__tests__/integration/slots.test.ts#GET /api/slots returns 422 for invalid date format","name":"returns 422 for invalid date format","status":"passed","testResultsByEnv":{"default":"97e11f22d1118ed72ed1d35e6dc218e8"}}

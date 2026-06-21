@@ -1,0 +1,1 @@
+{"id":"be428bfed5b474fdad37541daac005f7","fullName":"calendar-booking:src/__tests__/integration/bookings.test.ts#DELETE /bookings/:id actually removes booking from store","name":"actually removes booking from store","status":"passed","testResultsByEnv":{"default":"f6c0ae6486a769944f2037c382ce4406"}}

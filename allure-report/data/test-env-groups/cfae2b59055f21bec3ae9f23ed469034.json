@@ -1,0 +1,1 @@
+{"id":"cfae2b59055f21bec3ae9f23ed469034","fullName":"calendar-booking:src/__tests__/integration/bookings.test.ts#POST /bookings returns 422 when guestName is missing","name":"returns 422 when guestName is missing","status":"passed","testResultsByEnv":{"default":"7b36837c32c201adf2677c7fa83cc2d0"}}

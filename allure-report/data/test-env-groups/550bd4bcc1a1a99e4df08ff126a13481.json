@@ -1,0 +1,1 @@
+{"id":"550bd4bcc1a1a99e4df08ff126a13481","fullName":"calendar-booking:src/__tests__/integration/bookings.test.ts#POST /bookings/:id/cancel renders cancelled page with valid email","name":"renders cancelled page with valid email","status":"passed","testResultsByEnv":{"default":"3a8de656b47e3df8648178674ee830f0"}}

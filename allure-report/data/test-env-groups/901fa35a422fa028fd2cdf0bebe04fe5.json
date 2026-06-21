@@ -1,0 +1,1 @@
+{"id":"901fa35a422fa028fd2cdf0bebe04fe5","fullName":"calendar-booking:src/__tests__/integration/bookings.test.ts#POST /bookings returns JSON redirect when Content-Type is application/json","name":"returns JSON redirect when Content-Type is application/json","status":"passed","testResultsByEnv":{"default":"309cc53096a4f803c91c94fe9ebe13d6"}}

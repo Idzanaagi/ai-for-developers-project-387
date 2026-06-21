@@ -1,0 +1,1 @@
+{"id":"77e41fb27d72a9ebf166e1b62abc6bfb","fullName":"calendar-booking:src/__tests__/integration/admin.test.ts#GET /admin excludes past bookings from the list","name":"excludes past bookings from the list","status":"passed","testResultsByEnv":{"default":"6a300a5bf195ad1297f73596e22cd698"}}
