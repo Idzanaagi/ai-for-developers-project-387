@@ -85,4 +85,46 @@ router.get('/bookings/:id', (req, res) => {
   }
 });
 
+function cancelBooking(id: string, guestEmail: string): { error?: string } {
+  const booking = bookings.get(id);
+  if (!booking) {
+    return { error: 'Бронь не найдена' };
+  }
+  if (booking.guestEmail !== guestEmail) {
+    return { error: 'Email не совпадает с email брони' };
+  }
+  bookings.delete(id);
+  return {};
+}
+
+router.delete('/bookings/:id', (req, res) => {
+  const { guestEmail } = req.body;
+
+  if (!guestEmail) {
+    return res.status(422).json({ error: 'ValidationError', message: 'Email обязателен' });
+  }
+
+  const result = cancelBooking(req.params.id, guestEmail);
+  if (result.error) {
+    return res.status(404).json({ error: 'NotFound', message: result.error });
+  }
+
+  res.json({ success: true });
+});
+
+router.post('/bookings/:id/cancel', (req, res) => {
+  const { guestEmail } = req.body;
+
+  if (!guestEmail) {
+    return res.status(422).render('public/error', { message: 'Email обязателен' });
+  }
+
+  const result = cancelBooking(req.params.id, guestEmail);
+  if (result.error) {
+    return res.status(404).render('public/error', { message: result.error });
+  }
+
+  res.render('public/bookings/cancelled');
+});
+
 export default router;

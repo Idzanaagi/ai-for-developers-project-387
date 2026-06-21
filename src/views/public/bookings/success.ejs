@@ -8,30 +8,40 @@
 </head>
 <body>
   <div class="container">
-    <div class="success-card">
-      <h1>Вы записаны!</h1>
-      <p class="subtitle">Детали бронирования:</p>
+    <div class="success-card" data-test-id="success-card">
+      <h1 data-test-id="success-heading">Вы записаны!</h1>
+      <p class="subtitle" data-test-id="success-subtitle">Детали бронирования:</p>
 
-      <table class="booking-details">
+      <table class="booking-details" data-test-id="booking-details">
         <tr>
           <td>Дата:</td>
-          <td><strong><%= booking.startTime.toLocaleDateString('ru-RU', { timeZone: 'Etc/GMT-3', day: 'numeric', month: 'long', year: 'numeric' }) %></strong></td>
+          <td data-test-id="booking-date"><strong><%= booking.startTime.toLocaleDateString('ru-RU', { timeZone: 'Etc/GMT-3', day: 'numeric', month: 'long', year: 'numeric' }) %></strong></td>
         </tr>
         <tr>
           <td>Время:</td>
-          <td><strong><%= booking.startTime.toLocaleTimeString('ru-RU', { timeZone: 'Etc/GMT-3', hour: '2-digit', minute: '2-digit' }) %> — <%= booking.endTime.toLocaleTimeString('ru-RU', { timeZone: 'Etc/GMT-3', hour: '2-digit', minute: '2-digit' }) %></strong></td>
+          <td data-test-id="booking-time"><strong><%= booking.startTime.toLocaleTimeString('ru-RU', { timeZone: 'Etc/GMT-3', hour: '2-digit', minute: '2-digit' }) %> — <%= booking.endTime.toLocaleTimeString('ru-RU', { timeZone: 'Etc/GMT-3', hour: '2-digit', minute: '2-digit' }) %></strong></td>
         </tr>
         <tr>
           <td>Имя:</td>
-          <td><strong><%= booking.guestName %></strong></td>
+          <td data-test-id="booking-name"><strong><%= booking.guestName %></strong></td>
         </tr>
         <tr>
           <td>Email:</td>
-          <td><strong><%= booking.guestEmail %></strong></td>
+          <td data-test-id="booking-email"><strong><%= booking.guestEmail %></strong></td>
         </tr>
       </table>
 
-      <a href="/" class="btn">На главную</a>
+      <a href="/" class="btn" data-test-id="home-link">На главную</a>
+
+      <div class="cancel-section" data-test-id="cancel-section">
+        <hr>
+        <h2 data-test-id="cancel-heading">Отменить запись</h2>
+        <p class="subtitle" data-test-id="cancel-text">Если вы не можете прийти, вы можете отменить запись.</p>
+        <form action="/bookings/<%= booking.id %>/cancel" method="POST" data-test-id="cancel-form">
+          <input type="hidden" name="guestEmail" value="<%= booking.guestEmail %>">
+          <button type="submit" class="btn btn-danger" data-test-id="cancel-btn" onclick="return confirm('Вы уверены, что хотите отменить запись?')">Отменить запись</button>
+        </form>
+      </div>
     </div>
   </div>
 </body>

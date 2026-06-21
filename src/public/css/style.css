@@ -493,3 +493,34 @@ h1 {
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
+/* Cancel section on success page */
+.cancel-section {
+  margin-top: 2rem;
+}
+
+.cancel-section hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin-bottom: 1.5rem;
+}
+
+.cancel-section h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #b91c1c;
+}
+
+.btn-danger {
+  background: #dc2626;
+  margin-top: 1rem;
+}
+
+.btn-danger:hover {
+  background: #b91c1c;
+}
+
+/* Cancelled page */
+.cancelled-card h1 {
+  color: #b91c1c;
+}
