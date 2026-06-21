@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.3](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.5.2...calendar-booking-v1.5.3) (2026-06-21)
+
+
+### Bug Fixes
+
+* add YAML document start marker ([f47eccc](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/f47eccc35019adeb361a042f7fe1370fa74f135d))
+
 ## [1.5.2](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.5.1...calendar-booking-v1.5.2) (2026-06-21)
 
 
