@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.8](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.5.7...calendar-booking-v1.5.8) (2026-06-21)
+
+
+### Bug Fixes
+
+* remove broken workflow, will recreate ([07f0c78](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/07f0c78914179bd7071f4fc2f52568fc176f5ecf))
+
 ## [1.5.7](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.5.6...calendar-booking-v1.5.7) (2026-06-21)
 
 
