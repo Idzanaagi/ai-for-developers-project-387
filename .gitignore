@@ -3,4 +3,6 @@ dist/
 config/opencode/.env
 test-results/
 lighthouse-reports/
+allure-results/
+allure-report/
 spec/openapi/

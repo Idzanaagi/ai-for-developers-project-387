@@ -1,8 +1,11 @@
-name: Tests
+name: tests
 
 on:
   pull_request:
     branches: [main]
+
+permissions:
+  contents: write
 
 jobs:
   test:
@@ -18,3 +21,17 @@ jobs:
       - run: npx playwright install --with-deps
       - run: npm test
       - run: npm run test:e2e
+      - run: npm run report:allure
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: allure-report
+          path: allure-report/
+      - uses: peaceiris/actions-gh-pages@v4
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: allure-report
+          publish_branch: gh-pages
+          destination_dir: allure-report
+          keep_files: true
