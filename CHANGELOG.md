@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.2](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.4.1...calendar-booking-v1.4.2) (2026-06-21)
+
+
+### CI/CD
+
+* add scheduled TODO review workflow (every 2 days) ([4797168](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/4797168bc77bb8fc16ed5d180f1d1f9e4ebfcfe3))
+
 ## [1.4.1](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.4.0...calendar-booking-v1.4.1) (2026-06-14)
 
 
