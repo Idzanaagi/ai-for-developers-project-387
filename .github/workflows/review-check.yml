@@ -1,0 +1,8 @@
+name: review-check
+on:
+  workflow_dispatch:
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "hello"
