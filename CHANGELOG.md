@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.13](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.5.12...calendar-booking-v1.5.13) (2026-06-21)
+
+
+### Bug Fixes
+
+* test workflow with lowercase name ([fbff755](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/fbff755177a63b443d5314c82f358edde7c158c6))
+
 ## [1.5.12](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.5.11...calendar-booking-v1.5.12) (2026-06-21)
 
 
