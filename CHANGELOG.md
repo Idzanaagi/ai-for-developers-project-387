@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.9](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.5.8...calendar-booking-v1.5.9) (2026-06-21)
+
+
+### Bug Fixes
+
+* recreate todo-review workflow with proper format ([9736c9e](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/9736c9e114a633512dd6daae2d71878791277e02))
+
 ## [1.5.8](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.5.7...calendar-booking-v1.5.8) (2026-06-21)
 
 
