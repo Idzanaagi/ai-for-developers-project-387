@@ -207,3 +207,104 @@ describe('GET /bookings/:id', () => {
     expect(res.text, 'должно быть сообщение "Бронь не найдена"').toContain('Бронь не найдена');
   });
 });
+
+describe('DELETE /bookings/:id', () => {
+  it('deletes a booking with valid email', async () => {
+    const id = addBooking();
+
+    const res = await request(app)
+      .delete(`/bookings/${id}`)
+      .send({ guestEmail: 'test@example.com' });
+
+    expect(res.status, 'должен быть 200 при успешном удалении').toBe(200);
+    expect(res.body.success, 'должен вернуть success: true').toBe(true);
+  });
+
+  it('returns 422 when guestEmail is missing', async () => {
+    const id = addBooking();
+
+    const res = await request(app)
+      .delete(`/bookings/${id}`)
+      .send({});
+
+    expect(res.status, 'должен быть 422 при отсутствии email').toBe(422);
+    expect(res.body.error, 'ошибка должна быть ValidationError').toBe('ValidationError');
+  });
+
+  it('returns 404 for non-existent booking', async () => {
+    const res = await request(app)
+      .delete('/bookings/non-existent-id')
+      .send({ guestEmail: 'test@example.com' });
+
+    expect(res.status, 'должен быть 404 для несуществующей брони').toBe(404);
+    expect(res.body.error, 'ошибка должна быть NotFound').toBe('NotFound');
+  });
+
+  it('returns 404 when email does not match', async () => {
+    const id = addBooking();
+
+    const res = await request(app)
+      .delete(`/bookings/${id}`)
+      .send({ guestEmail: 'wrong@example.com' });
+
+    expect(res.status, 'должен быть 404 при несовпадении email').toBe(404);
+    expect(res.body.error, 'ошибка должна быть NotFound').toBe('NotFound');
+  });
+
+  it('actually removes booking from store', async () => {
+    const id = addBooking();
+
+    await request(app)
+      .delete(`/bookings/${id}`)
+      .send({ guestEmail: 'test@example.com' });
+
+    const { bookings } = await import('../../data/store.js');
+    expect(bookings.has(id), 'бронь должна быть удалена из хранилища').toBe(false);
+  });
+});
+
+describe('POST /bookings/:id/cancel', () => {
+  it('renders cancelled page with valid email', async () => {
+    const id = addBooking();
+
+    const res = await request(app)
+      .post(`/bookings/${id}/cancel`)
+      .type('form')
+      .send({ guestEmail: 'test@example.com' });
+
+    expect(res.status, 'должен быть 200 при успешной отмене').toBe(200);
+    expect(res.text, 'должен содержать заголовок "Запись отменена"').toContain('Запись отменена');
+  });
+
+  it('returns 422 when guestEmail is missing', async () => {
+    const id = addBooking();
+
+    const res = await request(app)
+      .post(`/bookings/${id}/cancel`)
+      .type('form')
+      .send({});
+
+    expect(res.status, 'должен быть 422 при отсутствии email').toBe(422);
+    expect(res.text, 'должно быть сообщение "Email обязателен"').toContain('Email обязателен');
+  });
+
+  it('returns 404 for non-existent booking', async () => {
+    const res = await request(app)
+      .post('/bookings/non-existent-id/cancel')
+      .type('form')
+      .send({ guestEmail: 'test@example.com' });
+
+    expect(res.status, 'должен быть 404 для несуществующей брони').toBe(404);
+  });
+
+  it('returns 404 when email does not match', async () => {
+    const id = addBooking();
+
+    const res = await request(app)
+      .post(`/bookings/${id}/cancel`)
+      .type('form')
+      .send({ guestEmail: 'wrong@example.com' });
+
+    expect(res.status, 'должен быть 404 при несовпадении email').toBe(404);
+  });
+});

@@ -32,6 +32,16 @@
       </table>
 
       <a href="/" class="btn">На главную</a>
+
+      <div class="cancel-section">
+        <hr>
+        <h2>Отменить запись</h2>
+        <p class="subtitle">Если вы не можете прийти, вы можете отменить запись.</p>
+        <form action="/bookings/<%= booking.id %>/cancel" method="POST">
+          <input type="hidden" name="guestEmail" value="<%= booking.guestEmail %>">
+          <button type="submit" class="btn btn-danger" onclick="return confirm('Вы уверены, что хотите отменить запись?')">Отменить запись</button>
+        </form>
+      </div>
     </div>
   </div>
 </body>
