@@ -3,7 +3,7 @@ name: todo-reviews
 on:
   workflow_dispatch:
   schedule:
-    - cron: '45 14 * * *'
+    - cron: '30 16 * * *'
 
 jobs:
   opencode:
