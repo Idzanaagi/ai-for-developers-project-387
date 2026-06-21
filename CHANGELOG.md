@@ -1,5 +1,33 @@
 # Changelog
 
+## [1.5.0](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.4.2...calendar-booking-v1.5.0) (2026-06-21)
+
+
+### Features
+
+* add booking calendar app with server-side validation and TypeSp… ([da3a4df](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/da3a4df47e46398e3df07ef0237a1a01b8eb5bbc))
+* add booking calendar app with server-side validation and TypeSpec API spec ([1f9d195](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/1f9d19535c160548dbd52ad5996f3391eb708ada))
+* add opencode CI workflow and remove PLAN.md ([#3](https://github.com/Idzanaagi/ai-for-developers-project-387/issues/3)) ([12b8555](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/12b8555e1ef7d07a5aadfd40523ea4ed6d26321a))
+
+
+### Bug Fixes
+
+* move personal MCP servers to global config to fix CI validation ([#6](https://github.com/Idzanaagi/ai-for-developers-project-387/issues/6)) ([dfb4450](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/dfb4450de6d56cc3966583105e02403980ab96b0))
+
+
+### Chores
+
+* **main:** release calendar-booking 1.3.0 ([#2](https://github.com/Idzanaagi/ai-for-developers-project-387/issues/2)) ([f974fa9](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/f974fa9f3d723ecab5581f497d046a3f173f1fe5))
+* **main:** release calendar-booking 1.4.0 ([#4](https://github.com/Idzanaagi/ai-for-developers-project-387/issues/4)) ([d524b1e](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/d524b1ebf8c127e3370af6f6fbb7e09d4fee1bb3))
+* **main:** release calendar-booking 1.4.1 ([#7](https://github.com/Idzanaagi/ai-for-developers-project-387/issues/7)) ([2c193ff](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/2c193ffa535b4be1ec05a11ae0282cf4ddf1e90d))
+
+## [1.4.2](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.4.1...calendar-booking-v1.4.2) (2026-06-21)
+
+
+### CI/CD
+
+* add scheduled TODO review workflow (every 2 days) ([4797168](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/4797168bc77bb8fc16ed5d180f1d1f9e4ebfcfe3))
+
 ## [1.4.1](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.4.0...calendar-booking-v1.4.1) (2026-06-14)
 
 
