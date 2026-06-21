@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.4](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.5.3...calendar-booking-v1.5.4) (2026-06-21)
+
+
+### Bug Fixes
+
+* simplify YAML structure for GitHub parser ([13f4e8b](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/13f4e8bdbc6a140d1a29675ea71539a92010adeb))
+
 ## [1.5.3](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.5.2...calendar-booking-v1.5.3) (2026-06-21)
 
 
