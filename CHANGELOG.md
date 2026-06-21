@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.2](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.5.1...calendar-booking-v1.5.2) (2026-06-21)
+
+
+### Bug Fixes
+
+* add branches filter to workflow_dispatch, add YAML document start marker ([401a417](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/401a417eb19cd7d1128108450f31c14d7f901a7f))
+
 ## [1.5.1](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.5.0...calendar-booking-v1.5.1) (2026-06-21)
 
 
