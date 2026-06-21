@@ -2,4 +2,5 @@ node_modules/
 dist/
 config/opencode/.env
 test-results/
+lighthouse-reports/
 spec/openapi/
