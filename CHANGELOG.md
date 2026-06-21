@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.0](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.11.1...calendar-booking-v1.12.0) (2026-06-21)
+
+
+### Features
+
+* integrate Allure reports for Vitest and Playwright runners ([#48](https://github.com/Idzanaagi/ai-for-developers-project-387/issues/48)) ([923f182](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/923f182253dcdc17d718fed33b910b904fb3a327))
+
 ## [1.11.1](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.11.0...calendar-booking-v1.11.1) (2026-06-21)
 
 
