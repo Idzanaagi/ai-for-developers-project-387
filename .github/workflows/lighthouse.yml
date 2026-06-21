@@ -1,9 +1,7 @@
 name: Lighthouse Audit
 on:
   schedule:
-    - cron: '0 3 * * *'
-  push:
-    branches: [main]
+    - cron: '20 14 * * *'
   workflow_dispatch:
 
 permissions:
