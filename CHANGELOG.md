@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.1](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.6.0...calendar-booking-v1.6.1) (2026-06-21)
+
+
+### Bug Fixes
+
+* remove schedule trigger to test name parsing ([fedc81c](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/fedc81cfaca6fd8b00480c42e8154f3b4691befd))
+
 ## [1.6.0](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.5.14...calendar-booking-v1.6.0) (2026-06-21)
 
 
