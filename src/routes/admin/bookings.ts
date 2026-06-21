@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import { bookings } from '../../data/store.js';
+import { TIMEZONE } from '../../config.js';
 
 const router = Router();
 
@@ -9,7 +10,7 @@ router.get('/admin', (_req, res) => {
       .filter(b => b.startTime > new Date())
       .sort((a, b) => a.startTime.getTime() - b.startTime.getTime());
 
-    res.render('admin/bookings/index', { bookings: list });
+    res.render('admin/bookings/index', { bookings: list, timezone: TIMEZONE });
   } catch {
     res.status(500).render('public/error', { message: 'Ошибка при загрузке списка броней' });
   }

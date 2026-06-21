@@ -15,11 +15,11 @@
       <table class="booking-details" data-test-id="booking-details">
         <tr>
           <td>Дата:</td>
-          <td data-test-id="booking-date"><strong><%= booking.startTime.toLocaleDateString('ru-RU', { timeZone: 'Etc/GMT-3', day: 'numeric', month: 'long', year: 'numeric' }) %></strong></td>
+          <td data-test-id="booking-date"><strong><%= booking.startTime.toLocaleDateString('ru-RU', { timeZone: timezone, day: 'numeric', month: 'long', year: 'numeric' }) %></strong></td>
         </tr>
         <tr>
           <td>Время:</td>
-          <td data-test-id="booking-time"><strong><%= booking.startTime.toLocaleTimeString('ru-RU', { timeZone: 'Etc/GMT-3', hour: '2-digit', minute: '2-digit' }) %> — <%= booking.endTime.toLocaleTimeString('ru-RU', { timeZone: 'Etc/GMT-3', hour: '2-digit', minute: '2-digit' }) %></strong></td>
+          <td data-test-id="booking-time"><strong><%= booking.startTime.toLocaleTimeString('ru-RU', { timeZone: timezone, hour: '2-digit', minute: '2-digit' }) %> — <%= booking.endTime.toLocaleTimeString('ru-RU', { timeZone: timezone, hour: '2-digit', minute: '2-digit' }) %></strong></td>
         </tr>
         <tr>
           <td>Имя:</td>

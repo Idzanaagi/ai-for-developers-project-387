@@ -1,7 +1,7 @@
 import { bookings } from '../data/store.js';
 import { Booking, Slot } from '../types/index.js';
+import { getTimezoneOffsetMs } from '../config.js';
 
-export const UTC_OFFSET = 3 * 3600000;
 export const SLOT_MINUTES = 30;
 export const BOOKING_WINDOW_DAYS = 14;
 const WORK_START_HOUR_UTC = 6;
@@ -14,9 +14,10 @@ export function hasOverlap(bookingList: Booking[], start: Date, end: Date): bool
 export function getAvailableSlots(date: string): Slot[] {
   const slots: Slot[] = [];
   const nowMs = Date.now();
-  const nowUTC3 = new Date(nowMs + UTC_OFFSET);
-  const todayUTC3 = nowUTC3.toISOString().slice(0, 10);
-  const isToday = date === todayUTC3;
+  const offset = getTimezoneOffsetMs();
+  const nowLocal = new Date(nowMs + offset);
+  const todayLocal = nowLocal.toISOString().slice(0, 10);
+  const isToday = date === todayLocal;
 
   const startOfDay = new Date(date + 'T00:00:00.000Z');
   if (isNaN(startOfDay.getTime())) return slots;
@@ -54,20 +55,21 @@ export function isBookableSlot(start: Date): boolean {
   const hour = start.getUTCHours();
   if (hour < WORK_START_HOUR_UTC || hour >= WORK_END_HOUR_UTC) return false;
 
-  const nowUTC3 = new Date(nowMs + UTC_OFFSET);
-  const startUTC3 = new Date(start.getTime() + UTC_OFFSET);
+  const offset = getTimezoneOffsetMs();
+  const nowLocal = new Date(nowMs + offset);
+  const startLocal = new Date(start.getTime() + offset);
   const dayMs = 24 * 3600000;
-  const todayMidnightUTC3 = Date.UTC(
-    nowUTC3.getUTCFullYear(),
-    nowUTC3.getUTCMonth(),
-    nowUTC3.getUTCDate()
+  const todayMidnightLocal = Date.UTC(
+    nowLocal.getUTCFullYear(),
+    nowLocal.getUTCMonth(),
+    nowLocal.getUTCDate()
   );
-  const startDayMidnightUTC3 = Date.UTC(
-    startUTC3.getUTCFullYear(),
-    startUTC3.getUTCMonth(),
-    startUTC3.getUTCDate()
+  const startDayMidnightLocal = Date.UTC(
+    startLocal.getUTCFullYear(),
+    startLocal.getUTCMonth(),
+    startLocal.getUTCDate()
   );
-  const dayDiff = Math.round((startDayMidnightUTC3 - todayMidnightUTC3) / dayMs);
+  const dayDiff = Math.round((startDayMidnightLocal - todayMidnightLocal) / dayMs);
   if (dayDiff < 0 || dayDiff >= BOOKING_WINDOW_DAYS) return false;
 
   return true;
