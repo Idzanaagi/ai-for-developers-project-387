@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.6.2...calendar-booking-v1.7.0) (2026-06-21)
+
+
+### Features
+
+* add TODO review workflow with manual trigger and fixed schedule ([#35](https://github.com/Idzanaagi/ai-for-developers-project-387/issues/35)) ([e1a7dcb](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/e1a7dcbfe03aa599b1fb8c27155acfa375cf600d))
+
 ## [1.6.2](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.6.1...calendar-booking-v1.6.2) (2026-06-21)
 
 
