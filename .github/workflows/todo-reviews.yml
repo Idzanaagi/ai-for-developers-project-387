@@ -1,79 +1,30 @@
-name: TODO Review
+name: todo-reviews
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '0 4 */2 * *'
 
 jobs:
-  review:
+  opencode:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      id-token: write
+      contents: write
+      pull-requests: write
       issues: write
     steps:
-      - uses: actions/checkout@v6
-      - name: Find TODOs
-        id: find
-        run: |
-          TODOS=$(grep -rn "TODO\|FIXME\|HACK\|XXX" \
-            --include="*.ts" --include="*.ejs" --include="*.js" \
-            --include="*.css" --include="*.yml" --include="*.yaml" \
-            --include="*.json" --include="*.md" \
-            src/ .github/ . || true)
-          {
-            echo "todos<<EOF"
-            echo "$TODOS"
-            echo "EOF"
-          } >> "$GITHUB_ENV"
-      - name: Check if TODOs exist
-        id: check
-        run: |
-          if [ -z "${todos}" ]; then
-            echo "skip=true" >> "$GITHUB_OUTPUT"
-            echo "No TODOs found, skipping"
-          else
-            echo "skip=false" >> "$GITHUB_OUTPUT"
-          fi
-        env:
-          todos: ${{ env.todos }}
-      - name: Analyze with opencode AI
-        if: steps.check.outputs.skip == 'false'
-        id: analyze
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Run OpenCode
+        uses: anomalyco/opencode/github@latest
         env:
           OPENCODE_API_KEY: ${{ secrets.opencode }}
-          TODOS: ${{ env.todos }}
-        run: |
-          PROMPT="Review these TODOs from the codebase. Categorize by severity (critical, medium, low). Suggest which are worth addressing soon. TODOs:
-$TODOS"
-          PAYLOAD=$(jq -n --arg p "$PROMPT" '{prompt: $p}')
-          RESPONSE=$(curl -s --max-time 60 \
-            -X POST "https://opencode.ai/zen/v1/responses" \
-            -H "Content-Type: application/json" \
-            -H "Authorization: Bearer $OPENCODE_API_KEY" \
-            -d "$PAYLOAD" || echo '{"error":"API call failed"}')
-          {
-            echo "response<<EOF"
-            echo "$RESPONSE"
-            echo "EOF"
-          } >> "$GITHUB_ENV"
-      - name: Create Issue
-        if: steps.check.outputs.skip == 'false'
-        uses: actions/github-script@v7
         with:
-          script: |
-            const todos = process.env.todos;
-            let summary = 'AI analysis unavailable (API call failed)';
-            try {
-              const ai = JSON.parse(process.env.response);
-              if (ai.error) {
-                summary = `AI analysis error: ${JSON.stringify(ai.error)}`;
-              } else {
-                summary = ai.text || ai.message?.content || ai.response || summary;
-              }
-            } catch {}
-            const date = new Date().toISOString().slice(0, 10);
-            await github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: `TODO Review (${date})`,
-              body: `## TODO Review — ${date}\n\n### AI Summary\n\n${summary}\n\n### Raw TODOs\n\n\`\`\`\n${todos}\n\`\`\``,
-            });
+          model: opencode/big-pickle
+          prompt: |
+            Review the codebase for any TODO comments and create a summary.
+            If you find issues worth addressing, open an issue to track them.
