@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.5](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.12.4...calendar-booking-v1.12.5) (2026-06-21)
+
+
+### Bug Fixes
+
+* **lighthouse:** improve issue format with category, score icon, and table layout ([64c2ddd](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/64c2dddf1d0124073e5312b05cc7c5307f5fcb49))
+
 ## [1.12.4](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.12.3...calendar-booking-v1.12.4) (2026-06-21)
 
 
