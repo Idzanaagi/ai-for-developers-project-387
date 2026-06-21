@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.7.0...calendar-booking-v1.8.0) (2026-06-21)
+
+
+### Features
+
+* add Lighthouse CI audit with thresholds ([#37](https://github.com/Idzanaagi/ai-for-developers-project-387/issues/37)) ([e312008](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/e312008ed41048772deacaf34ea2a2f7acaf4f01))
+
 ## [1.7.0](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.6.2...calendar-booking-v1.7.0) (2026-06-21)
 
 
