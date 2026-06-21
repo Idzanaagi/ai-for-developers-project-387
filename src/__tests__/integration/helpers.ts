@@ -1,11 +1,11 @@
 import { bookings } from '../../data/store.js';
-
-const UTC_OFFSET = 3 * 3600000;
+import { getTimezoneOffsetMs } from '../../config.js';
 
 export function futureDate(daysAhead = 7): string {
-  const nowUTC3 = new Date(Date.now() + UTC_OFFSET);
-  nowUTC3.setUTCDate(nowUTC3.getUTCDate() + daysAhead);
-  return nowUTC3.toISOString().slice(0, 10);
+  const offset = getTimezoneOffsetMs();
+  const nowLocal = new Date(Date.now() + offset);
+  nowLocal.setUTCDate(nowLocal.getUTCDate() + daysAhead);
+  return nowLocal.toISOString().slice(0, 10);
 }
 
 export function futureSlotStart(daysAhead = 7, hourUTC = 7): string {
