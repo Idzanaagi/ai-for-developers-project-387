@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.0](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.9.0...calendar-booking-v1.10.0) (2026-06-21)
+
+
+### Features
+
+* generate index.html with scores overview for GitHub Pages ([#41](https://github.com/Idzanaagi/ai-for-developers-project-387/issues/41)) ([7264a7a](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/7264a7a802e364e302e50fd0e50d32fce741473d))
+
 ## [1.9.0](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.8.0...calendar-booking-v1.9.0) (2026-06-21)
 
 
