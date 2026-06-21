@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.7](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.5.6...calendar-booking-v1.5.7) (2026-06-21)
+
+
+### Bug Fixes
+
+* use simple workflow name without spaces ([55a05b3](https://github.com/Idzanaagi/ai-for-developers-project-387/commit/55a05b3c4a005d3b7a61e02302c28ea99e163d55))
+
 ## [1.5.6](https://github.com/Idzanaagi/ai-for-developers-project-387/compare/calendar-booking-v1.5.5...calendar-booking-v1.5.6) (2026-06-21)
 
 
