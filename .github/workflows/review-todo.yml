@@ -1,4 +1,4 @@
-name: TODO Review
+name: review-todo
 on:
   workflow_dispatch:
   schedule:
