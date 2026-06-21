@@ -18,7 +18,7 @@ async function getFailingAudits() {
     const content = await readFile(join(OUTPUT_DIR, file), 'utf-8');
     const lhr = JSON.parse(content);
 
-    for (const cat of Object.values(lhr.categories)) {
+    for (const [catKey, cat] of Object.entries(lhr.categories)) {
       for (const ref of cat.auditRefs) {
         const audit = lhr.audits[ref.id];
         if (!audit || audit.score == null || audit.score >= 1) continue;
@@ -30,6 +30,7 @@ async function getFailingAudits() {
 
         findings.push({
           page: pageName,
+          category: cat.title || catKey,
           title: audit.title,
           description: (audit.description || '').replace(/\n/g, ' ').slice(0, 500),
           score: audit.score,
@@ -88,13 +89,20 @@ async function main() {
     if (existingIssues.some(i => i.title === title)) continue;
 
     const route = finding.page === 'calendar' ? '' : finding.page;
+    const scorePct = Math.round(finding.score * 100);
+    const icon = scorePct >= 90 ? '🟢' : scorePct >= 50 ? '🟡' : '🔴';
     const body = [
-      `**Page**: /${route}`,
-      `**Score**: ${Math.round(finding.score * 100)} / 100`,
-      '',
+      `| | |`,
+      `|---|---|`,
+      `| **Page** | \`/${route}\` |`,
+      `| **Category** | ${finding.category} |`,
+      `| **Score** | ${icon} ${scorePct} / 100 |`,
+      ``,
+      `**${finding.title}**`,
+      ``,
       finding.description,
-      '',
-      `[View report](${REPORTS_URL}/${finding.page}.html)`,
+      ``,
+      `[View full report](${REPORTS_URL}/${finding.page}.html)`,
     ].join('\n');
 
     const cmd = `gh issue create --title ${JSON.stringify(title)} --label ${LABEL} --body ${JSON.stringify(body)}`;
