@@ -14,7 +14,7 @@
     "test:e2e": "playwright test",
     "lighthouse": "node scripts/lighthouse.mjs",
     "lighthouse:open": "node scripts/lighthouse.mjs --open",
-    "report:allure": "allure generate --output allure-report --clean",
+    "report:allure": "allure generate --output allure-report",
     "report:allure:open": "allure open --port 4000"
   },
   "dependencies": {
